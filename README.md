@@ -182,7 +182,7 @@ def filter_DF(df, colname, string):
 7. There is a correlation with 99% CI
 
 <p align='left'>
-<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Correlation_graph.png" width="600" height="500">
+<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Correlation_graph.png" width="400" height="300">
 </p>
 
 ## Welch's t-test
@@ -195,7 +195,7 @@ def filter_DF(df, colname, string):
 7. With a 99% CI There is a significant difference
 
 <p align='left'>
-<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/LEVO_VS_LISI_Dist.png" width="600" height="500">
+<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/LEVO_VS_LISI_Dist.png" width="400" height="300">
 </p>
 
 # IF I HAD MORE TIME!!
