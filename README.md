@@ -32,12 +32,12 @@ The majority of my work experience is in health care. I am facisnated with the c
 
 - Discover what effects drug prescription claims
 - Discover if population demographics are a factor
- - Gender
- - Race
- - Age
+   - Gender
+   - Race
+   - Age
 - Discover if geographical location is a factor
- - Coastal vs South
- - Population density
+   - Coastal vs South
+   - Population density
 
 
 
