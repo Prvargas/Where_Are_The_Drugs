@@ -194,4 +194,4 @@ def filter_DF(df, colname, string):
 
 # IF I HAD MORE TIME!!
 
-Due to time constraints I was unable to dive deeper into this data. Different people have different cultures and habits which lead lead to different health levels. Also, certain environments effect the human body differently. Not to mention certain groups tend to cluster in different areas for various reasons. I would like to look at race and geographical location as variables for drug prescriptions. 
+Due to time constraints I was unable to dive deeper into this data. Different people have different cultures and habits which lead lead to different health levels. Also, certain environments effect the human body differently. Not to mention certain groups tend to cluster in different areas for various reasons. If I had more time, then I would like to look at race and geographical location as variables for drug prescription type and use. 
