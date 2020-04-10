@@ -100,8 +100,9 @@ bq_assistant = BigQueryHelper("bigquery-public-data", "cms_medicare")
 <!-- #region -->
 # Pipeline
 ## SQL Query to get total claims by state
-![]( https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/SQL_Most_Presc.png )
-
+<p align='left'>
+<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/SQL_Most_Presc.png" width="600" height="500">
+</p>
 
 ## SQL Query to get top 5 drugs with highest number of claims
 ![](https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/SQL_Top5.png)
@@ -150,7 +151,9 @@ def filter_DF(df, colname, string):
 # More EDA
 
 ## Demographic Correlations
-![](https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Population_Heatmap.jpg)
+<p align='left'>
+<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Population_Heatmap.jpg" width="600" height="500">
+</p>
 
 ## Distributions
 ![](https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Gender_Rank_Dist.png)
@@ -178,7 +181,9 @@ def filter_DF(df, colname, string):
 6. r(45) = .433 > .372; REJECT NULL 
 7. There is a correlation with 99% CI
 
-![](https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Correlation_graph.png)
+<p align='left'>
+<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Correlation_graph.png" width="600" height="500">
+</p>
 
 ## Welch's t-test
 1. There is NO significant difference in claims percentage between the drugs LEVOTHYROXINE SODIUM and LISINOPRIL
@@ -189,8 +194,9 @@ def filter_DF(df, colname, string):
 6. pval = .0007 < .01; REJECT NULL 
 7. With a 99% CI There is a significant difference
 
-![](https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/LEVO_VS_LISI_Dist.png)
-
+<p align='left'>
+<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/LEVO_VS_LISI_Dist.png" width="600" height="500">
+</p>
 
 # IF I HAD MORE TIME!!
 
