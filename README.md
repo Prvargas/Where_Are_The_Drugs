@@ -143,7 +143,7 @@ def filter_DF(df, colname, string):
         Returns: Filtered Dataframe
     '''
     mask = df[colname].str.contains(string)
-    return df[mask]'''
+    return df[mask]
     
   ```
   
