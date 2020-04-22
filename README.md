@@ -115,7 +115,7 @@ population_df = pd.read_csv('/Users/phillliprashaad/Desktop/Galvanzie_DSI/Capsto
 #Import demographics table
 demographic_df = pd.read_csv('/Users/phillliprashaad/Desktop/Galvanzie_DSI/Capstone_1/Where_Are_The_Drugs/import_tables/demographic_by_state.csv')
 ```
-## Create functions that helps merge needed tables on filtered row
+## Create functions that help merge needed tables on filtered row
 ```python
 def left_df_merge(df1, df2, col1, col2 ):
     '''Helps left merge data frames
@@ -162,7 +162,7 @@ def filter_DF(df, colname, string):
 ![](https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/LEVO_LISI_Dist.png)
 <!-- #endregion -->
 
-# Hypothesis Test
+# Hypothesis Test Steps
 
 1. Define Null and Alternative Hypotheses
 2. State Alpha
@@ -171,19 +171,6 @@ def filter_DF(df, colname, string):
 5. Calculate Test Statistic
 6. State Results
 7. State Conclusion
-
-## Spearman Correlation r-test
-1. There is NO relationship between gender and drug rank for drug LEVOTHYROXINE SODIUM
-2. Alpha = .01
-3. DOF = 47-2= 45
-4. If r > .372, then REJECT Null
-5. r(45) = .433
-6. r(45) = .433 > .372; REJECT NULL 
-7. There is a correlation with 99% CI
-
-<p align='left'>
-<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Correlation_graph.png" width="400" height="300">
-</p>
 
 ## Welch's t-test
 1. There is NO significant difference in claims percentage between the drugs LEVOTHYROXINE SODIUM and LISINOPRIL
