@@ -25,25 +25,25 @@ Medicare drug plans are optional. You’ll have a monthly premium that you will 
 
 # Why Research Drugs?
 
-The vast majority of my work experience is in health care. I am facisnated with the complexity of the industry. This is a business of saving lives. Is there any more valuable service? I decided to focus on presciption drugs because I could view the treatments and diseases simultaneously. (ie the treatment indicates the disease)
+The majority of my work experience is in health care. I am facisnated with the complexity of the industry. This is a business of saving lives. Is there any more valuable service? I decided to focus on presciption drugs because I could view the treatments and diseases simultaneously. (ie the treatment indicates the disease)
 
 
 # Goals
 
 - Discover what effects drug prescription claims
 - Discover if population demographics are a factor
- - Gender
- - Race
- - Age
+   - Gender
+   - Race
+   - Age
 - Discover if geographical location is a factor
- - Coastal vs South
- - Population density
+   - Coastal vs South
+   - Population density
 
 
 
 # Sources
 
-![sources_pic.png](attachment:sources_pic.png)
+![]( https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/sources_pic.png )
 
 ### Google Cloud Platform: [<ins>Medications Table<ins>](https://console.cloud.google.com/bigquery?project=bold-lantern-272703&folder=&organizationId=&p=bigquery-public-data&d=cms_medicare&t=physicians_and_other_supplier_2015&page=table)
     
@@ -99,16 +99,13 @@ bq_assistant = BigQueryHelper("bigquery-public-data", "cms_medicare")
 
 <!-- #region -->
 # Pipeline
-
 ## SQL Query to get total claims by state
-<p align='center'>
-<img src= " " width="400" height="300" >
+<p align='left'>
+<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/SQL_Most_Presc.png" width="600" height="500">
 </p>
 
-
-
 ## SQL Query to get top 5 drugs with highest number of claims
-![SQL_Top5.png](attachment:SQL_Top5.png)
+![](https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/SQL_Top5.png)
 
 ## Import csv files downloaded from Census
 ```python
@@ -118,7 +115,7 @@ population_df = pd.read_csv('/Users/phillliprashaad/Desktop/Galvanzie_DSI/Capsto
 #Import demographics table
 demographic_df = pd.read_csv('/Users/phillliprashaad/Desktop/Galvanzie_DSI/Capstone_1/Where_Are_The_Drugs/import_tables/demographic_by_state.csv')
 ```
-## Create functions that helps merge needed tables on filtered row
+## Create functions that help merge needed tables on filtered row
 ```python
 def left_df_merge(df1, df2, col1, col2 ):
     '''Helps left merge data frames
@@ -133,9 +130,10 @@ def left_df_merge(df1, df2, col1, col2 ):
     df_merge = df1.merge(df2, how='left', 
                             left_on=col1, 
                             right_on=col2 )
-    return df_merge
+    return df_merge ```
 
 
+```python 
 def filter_DF(df, colname, string):
     '''Searches a specific column to see if it contains a given value
         
@@ -146,25 +144,25 @@ def filter_DF(df, colname, string):
         Returns: Filtered Dataframe
     '''
     mask = df[colname].str.contains(string)
-    return df[mask]```
-
-
-<!-- #endregion -->
-
-<!-- #region -->
+    return df[mask]
+    
+  ```
+  
 # More EDA
 
 ## Demographic Correlations
-![Population_Heatmap.jpg](attachment:Population_Heatmap.jpg)
+<p align='left'>
+<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Population_Heatmap.jpg" width="600" height="500">
+</p>
 
 ## Distributions
-![Gender_Rank_Dist.png](attachment:Gender_Rank_Dist.png)
+![](https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/Gender_Rank_Dist.png)
 
 
-![LEVO_LISI_Dist.png](attachment:LEVO_LISI_Dist.png)
+![](https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/LEVO_LISI_Dist.png)
 <!-- #endregion -->
 
-# Hypothesis Test
+# Hypothesis Test Steps
 
 1. Define Null and Alternative Hypotheses
 2. State Alpha
@@ -173,17 +171,6 @@ def filter_DF(df, colname, string):
 5. Calculate Test Statistic
 6. State Results
 7. State Conclusion
-
-## Spearman Correlation r-test
-1. There is NO relationship between gender and drug rank for drug LEVOTHYROXINE SODIUM
-2. Alpha = .01
-3. DOF = 47-2= 45
-4. If r > .372, then REJECT Null
-5. r(45) = .433
-6. r(45) = .433 > .372; REJECT NULL 
-7. There is a correlation with 99% CI
-
-![Correlation_graph.png](attachment:Correlation_graph.png)
 
 ## Welch's t-test
 1. There is NO significant difference in claims percentage between the drugs LEVOTHYROXINE SODIUM and LISINOPRIL
@@ -194,14 +181,10 @@ def filter_DF(df, colname, string):
 6. pval = .0007 < .01; REJECT NULL 
 7. With a 99% CI There is a significant difference
 
-![LEVO_VS_LISI_Dist.png](attachment:LEVO_VS_LISI_Dist.png)
-
+<p align='left'>
+<img src="https://github.com/Prvargas/Where_Are_The_Drugs/blob/master/Images/LEVO_VS_LISI_Dist.png" width="400" height="300">
+</p>
 
 # IF I HAD MORE TIME!!
 
-Due to time constraints I was unable to dive deeper into this data. Different people have different cultures and habits which lead lead to different health levels. Also, certain environments effect the human body differently. Not to mention certain groups tend to cluster in different areas for various reasons. I would like to look at race and geographical location as variables for drug prescriptions. 
-
-
-```python
-
-```
+Due to time constraints I was unable to dive deeper into this data. Different people have different cultures and habits which lead lead to different health levels. Also, certain environments effect the human body differently. Not to mention certain groups tend to cluster in different areas for various reasons. If I had more time, then I would like to look at race and geographical location as variables for drug prescription type and use. 
